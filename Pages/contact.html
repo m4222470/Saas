@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Dark X SaaS Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../src/styles/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/images/logo/logo-dark.svg" alt="Dark X" class="logo-image">
+                </a>
+                <nav class="nav-main">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="primary-home.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="contact.html" class="btn btn-ghost">Sign In</a>
+                    <a href="pricing.html" class="btn btn-primary">Get Started</a>
+                </div>
+                <button class="cart-button"><i class="bi bi-cart3"></i><span class="cart-count">0</span></button>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero hero-page">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="hero-title">Get in <span class="text-accent">Touch</span></h1>
+                <p class="hero-description">Have a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-contact">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="bi bi-envelope"></i></div>
+                        <div class="info-content">
+                            <h3 class="info-title">Email</h3>
+                            <p class="info-text">hello@darkx.com</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="bi bi-telephone"></i></div>
+                        <div class="info-content">
+                            <h3 class="info-title">Phone</h3>
+                            <p class="info-text">+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="bi bi-geo-alt"></i></div>
+                        <div class="info-content">
+                            <h3 class="info-title">Address</h3>
+                            <p class="info-text">123 Tech Street, San Francisco, CA 94102</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="bi bi-clock"></i></div>
+                        <div class="info-content">
+                            <h3 class="info-title">Working Hours</h3>
+                            <p class="info-text">Mon - Fri: 9AM - 6PM (PST)</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links mt-8">
+                        <h4 class="social-title">Follow Us</h4>
+                        <div class="flex gap-4">
+                            <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="bi bi-github"></i></a>
+                            <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" name="first-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" name="last-name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="sales">Sales Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="billing">Billing Question</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-full">
+                            <span>Send Message</span>
+                            <i class="bi bi-send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section section-map">
+        <div class="container">
+            <div class="map-wrapper">
+                <div class="map-placeholder">
+                    <i class="bi bi-map"></i>
+                    <span>Map Location</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-menu-main">
+                    <div class="footer-menu-section">
+                        <h4 class="footer-menu-title">Pages</h4>
+                        <ul class="footer-nav">
+                            <li><a href="primary-home.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="features.html">Features</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu-section">
+                        <h4 class="footer-menu-title">Resources</h4>
+                        <ul class="footer-nav">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="integrations.html">Integrations</a></li>
+                            <li><a href="team.html">Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu-section footer-newsletter">
+                        <h4 class="footer-menu-title">Stay Updated</h4>
+                        <p class="footer-newsletter-text">Subscribe to our newsletter for the latest updates.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="../assets/images/logo/logo-dark.svg" alt="Dark X">
+                    </a>
+                    <p class="footer-copyright">Copyright © Dark X | Designed by BRIX Templates</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/scripts/main.js"></script>
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: var(--space-12);
+        }
+
+        .info-card {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-4);
+            padding: var(--space-6);
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-xl);
+            margin-bottom: var(--space-4);
+        }
+
+        .info-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+            border-radius: var(--radius-lg);
+            font-size: var(--font-size-xl);
+            color: white;
+        }
+
+        .info-title {
+            font-size: var(--font-size-lg);
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--space-1);
+        }
+
+        .info-text {
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-sm);
+        }
+
+        .social-title {
+            font-size: var(--font-size-lg);
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--space-4);
+        }
+
+        .social-link {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-bg-tertiary);
+            border-radius: var(--radius-lg);
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-lg);
+            transition: all var(--transition-fast);
+        }
+
+        .social-link:hover {
+            background: var(--color-accent);
+            color: white;
+        }
+
+        .contact-form-wrapper {
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-8);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-4);
+        }
+
+        .form-group label {
+            display: block;
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-medium);
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-2);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: var(--space-3) var(--space-4);
+            background: var(--color-bg-tertiary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            color: var(--color-text-primary);
+            font-size: var(--font-size-base);
+            transition: all var(--transition-fast);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--color-text-muted);
+        }
+
+        .map-wrapper {
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+        }
+
+        .map-placeholder {
+            height: 400px;
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            color: var(--color-text-muted);
+        }
+
+        .map-placeholder i {
+            font-size: 48px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>

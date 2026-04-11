@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark X - Modern SaaS Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <style>
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 120px 0 80px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: var(--radius-full);
+            color: var(--color-accent);
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-6);
+        }
+
+        .hero-badge i {
+            font-size: var(--font-size-xs);
+        }
+
+        .hero-title {
+            font-size: var(--font-size-6xl);
+            font-weight: var(--font-weight-extrabold);
+            line-height: 1.1;
+            margin-bottom: var(--space-6);
+        }
+
+        .hero-title .text-accent {
+            background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: var(--font-size-xl);
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto var(--space-8);
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-4);
+            flex-wrap: wrap;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-12);
+            margin-top: var(--space-12);
+            padding-top: var(--space-12);
+            border-top: 1px solid var(--color-border);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: var(--font-size-4xl);
+            font-weight: var(--font-weight-bold);
+            background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-muted);
+            margin-top: var(--space-1);
+        }
+
+        /* Trusted By Section */
+        .trusted-section {
+            padding: var(--space-12) 0;
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .trusted-content {
+            text-align: center;
+        }
+
+        .trusted-label {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-8);
+        }
+
+        .trusted-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-12);
+            flex-wrap: wrap;
+        }
+
+        .trusted-logo {
+            font-size: var(--font-size-xl);
+            color: var(--color-text-muted);
+            opacity: 0.5;
+            transition: opacity var(--transition-fast);
+        }
+
+        .trusted-logo:hover {
+            opacity: 1;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+        }
+
+        .feature-card {
+            padding: var(--space-8);
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-xl);
+            transition: all var(--transition-normal);
+        }
+
+        .feature-card:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+            border-radius: var(--radius-lg);
+            font-size: var(--font-size-xl);
+            color: white;
+            margin-bottom: var(--space-4);
+        }
+
+        .feature-card h3 {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--space-2);
+        }
+
+        .feature-card p {
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-sm);
+            line-height: 1.7;
+        }
+
+        /* How It Works */
+        .how-it-works-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-8);
+            position: relative;
+        }
+
+        .how-it-works-grid::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: calc(16.67% + 20px);
+            right: calc(16.67% + 20px);
+            height: 2px;
+            background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+        }
+
+        .step-card {
+            text-align: center;
+            padding: var(--space-8);
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-6);
+            background: var(--color-bg-card);
+            border: 2px solid var(--color-accent);
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-accent);
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-card h3 {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--space-2);
+        }
+
+        .step-card p {
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-sm);
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+        }
+
+        .testimonial-card {
+            padding: var(--space-8);
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-xl);
+        }
+
+        .testimonial-content {
+            font-size: var(--font-size-lg);
+            color: var(--color-text-primary);
+            line-height: 1.7;
+            margin-bottom: var(--space-6);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: var(--font-weight-semibold);
+        }
+
+        .author-info h4 {
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        .author-info p {
+            font-size: var(--font-size-xs);
+            color: var(--color-text-muted);
+        }
+
+        /* Pricing Preview */
+        .pricing-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+        }
+
+        .pricing-card {
+            padding: var(--space-8);
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-xl);
+            text-align: center;
+            transition: all var(--transition-normal);
+        }
+
+        .pricing-card:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-4px);
+        }
+
+        .pricing-card.popular {
+            border-color: var(--color-accent);
+            position: relative;
+        }
+
+        .pricing-card.popular::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: var(--space-1) var(--space-4);
+            background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+            color: white;
+            font-size: var(--font-size-xs);
+            font-weight: var(--font-weight-semibold);
+            border-radius: var(--radius-full);
+        }
+
+        .pricing-card h3 {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--space-2);
+        }
+
+        .pricing-card .price {
+            font-size: var(--font-size-4xl);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-4);
+        }
+
+        .pricing-card .price span {
+            font-size: var(--font-size-base);
+            color: var(--color-text-muted);
+            font-weight: var(--font-weight-normal);
+        }
+
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 var(--space-6);
+        }
+
+        .pricing-features li {
+            padding: var(--space-2) 0;
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-sm);
+        }
+
+        .pricing-features li i {
+            color: var(--color-success);
+            margin-right: var(--space-2);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(244, 114, 182, 0.1));
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-12);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: var(--font-size-3xl);
+            margin-bottom: var(--space-4);
+        }
+
+        .cta-section p {
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-lg);
+            max-width: 600px;
+            margin: 0 auto var(--space-8);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: var(--font-size-4xl);
+            }
+
+            .features-grid,
+            .testimonials-grid,
+            .pricing-preview-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .how-it-works-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-4);
+            }
+
+            .how-it-works-grid::before {
+                display: none;
+            }
+
+            .hero-stats {
+                gap: var(--space-8);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 0 60px;
+            }
+
+            .hero-title {
+                font-size: var(--font-size-3xl);
+            }
+
+            .hero-description {
+                font-size: var(--font-size-base);
+            }
+
+            .features-grid,
+            .testimonials-grid,
+            .pricing-preview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: var(--space-6);
+            }
+
+            .trusted-logos {
+                gap: var(--space-6);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/images/logo/logo-dark.svg" alt="Dark X" class="logo-image">
+                </a>
+                <nav class="nav-main">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="primary-home.html" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="contact.html" class="btn btn-ghost">Sign In</a>
+                    <a href="pricing.html" class="btn btn-primary">Get Started</a>
+                </div>
+                <button class="cart-button"><i class="bi bi-cart3"></i><span class="cart-count">0</span></button>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="bi bi-stars"></i>
+                    <span>New: AI-Powered Analytics Now Available</span>
+                </div>
+                <h1 class="hero-title">Build Something <span class="text-accent">Amazing</span> With Dark X</h1>
+                <p class="hero-description">
+                    The most powerful and flexible SaaS platform for modern businesses. Scale effortlessly, ship faster, and grow without limits.
+                </p>
+                <div class="hero-buttons">
+                    <a href="pricing.html" class="btn btn-primary btn-lg">
+                        <i class="bi bi-rocket-takeoff"></i> Get Started Free
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary btn-lg">
+                        <i class="bi bi-play-circle"></i> Watch Demo
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">10K+</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">99.9%</div>
+                        <div class="stat-label">Uptime SLA</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">50+</div>
+                        <div class="stat-label">Integrations</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">24/7</div>
+                        <div class="stat-label">Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By -->
+    <section class="trusted-section">
+        <div class="container">
+            <div class="trusted-content">
+                <p class="trusted-label">Trusted by innovative companies worldwide</p>
+                <div class="trusted-logos">
+                    <span class="trusted-logo"><i class="bi bi-google"></i> Google</span>
+                    <span class="trusted-logo"><i class="bi bi-microsoft"></i> Microsoft</span>
+                    <span class="trusted-logo"><i class="bi bi-amazon"></i> Amazon</span>
+                    <span class="trusted-logo"><i class="bi bi-slack"></i> Slack</span>
+                    <span class="trusted-logo"><i class="bi bi-stripe"></i> Stripe</span>
+                    <span class="trusted-logo"><i class="bi bi-github"></i> GitHub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Features</span>
+                <h2 class="section-title">Everything You Need</h2>
+                <p class="section-description">Powerful features to help you build, scale, and succeed.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="bi bi-lightning-charge"></i></div>
+                    <h3>Lightning Fast</h3>
+                    <p>Built for speed with optimized code and global CDN delivery. Your website loads in milliseconds.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+                    <h3>Enterprise Security</h3>
+                    <p>Bank-level encryption and compliance with SOC 2, GDPR, and HIPAA standards.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Real-time dashboards and insights help you understand your users and optimize.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="bi bi-puzzle"></i></div>
+                    <h3>Seamless Integrations</h3>
+                    <p>Connect with 100+ popular tools including Slack, Salesforce, Zapier, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="bi bi-people"></i></div>
+                    <h3>Team Collaboration</h3>
+                    <p>Work together with your team in real-time. Share, comment, and collaborate effortlessly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="bi bi-headset"></i></div>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated support team is available around the clock to help you succeed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">How It Works</span>
+                <h2 class="section-title">Get Started in Minutes</h2>
+                <p class="section-description">Three simple steps to start building your dream product.</p>
+            </div>
+            <div class="how-it-works-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Create Account</h3>
+                    <p>Sign up for free and get instant access to all features. No credit card required.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Configure</h3>
+                    <p>Customize your workspace and connect your favorite tools in just a few clicks.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Launch</h3>
+                    <p>Go live and start growing. Our team is here to help you every step of the way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Testimonials</span>
+                <h2 class="section-title">Loved by Teams Worldwide</h2>
+                <p class="section-description">See what our customers have to say about Dark X.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-content">"Dark X has transformed how we work. The integrations and analytics alone have saved us countless hours every week."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <h4>John Doe</h4>
+                            <p>CEO at TechCorp</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-content">"The best investment we've made. Dark X scales perfectly with our growth and the support team is phenomenal."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h4>Sarah Miller</h4>
+                            <p>Founder at StartupXYZ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-content">"We moved from another platform and never looked back. Dark X is faster, easier, and more powerful."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div class="author-info">
+                            <h4>Mike Kim</h4>
+                            <p>CTO at Innovate Inc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Preview -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Pricing</span>
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p class="section-description">Choose the plan that fits your needs. All plans include a 14-day free trial.</p>
+            </div>
+            <div class="pricing-preview-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$19<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check"></i> 5 Projects</li>
+                        <li><i class="bi bi-check"></i> 10GB Storage</li>
+                        <li><i class="bi bi-check"></i> Basic Analytics</li>
+                        <li><i class="bi bi-check"></i> Email Support</li>
+                    </ul>
+                    <a href="pricing-single.html" class="btn btn-secondary btn-lg w-full">Get Started</a>
+                </div>
+                <div class="pricing-card popular">
+                    <h3>Pro</h3>
+                    <div class="price">$79<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check"></i> Unlimited Projects</li>
+                        <li><i class="bi bi-check"></i> 100GB Storage</li>
+                        <li><i class="bi bi-check"></i> Advanced Analytics</li>
+                        <li><i class="bi bi-check"></i> Priority Support</li>
+                    </ul>
+                    <a href="pricing-single.html" class="btn btn-primary btn-lg w-full">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom</div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check"></i> Everything in Pro</li>
+                        <li><i class="bi bi-check"></i> Unlimited Storage</li>
+                        <li><i class="bi bi-check"></i> Custom Analytics</li>
+                        <li><i class="bi bi-check"></i> Dedicated Support</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-secondary btn-lg w-full">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-section">
+                <h2>Ready to Get Started?</h2>
+                <p>Join thousands of teams already using Dark X to build amazing products.</p>
+                <div class="hero-buttons">
+                    <a href="pricing.html" class="btn btn-primary btn-lg">
+                        <i class="bi bi-rocket-takeoff"></i> Start Free Trial
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary btn-lg">
+                        <i class="bi bi-chat-dots"></i> Talk to Sales
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-menu-main">
+                    <div class="footer-menu-section">
+                        <h4 class="footer-menu-title">Pages</h4>
+                        <ul class="footer-nav">
+                            <li><a href="primary-home.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="features.html">Features</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu-section">
+                        <h4 class="footer-menu-title">Resources</h4>
+                        <ul class="footer-nav">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="integrations.html">Integrations</a></li>
+                            <li><a href="team.html">Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu-section">
+                        <h4 class="footer-menu-title">Legal</h4>
+                        <ul class="footer-nav">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="licenses.html">Licenses</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu-section footer-newsletter">
+                        <h4 class="footer-menu-title">Stay Updated</h4>
+                        <p class="footer-newsletter-text">Subscribe to our newsletter for the latest updates.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="../assets/images/logo/logo-dark.svg" alt="Dark X">
+                    </a>
+                    <p class="footer-copyright">Copyright 2026 Dark X | Designed by BRIX Templates</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/scripts/main.js"></script>
+</body>
+</html>

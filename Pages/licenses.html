@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licenses - Dark X SaaS Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <style>
+        .licenses-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .license-card {
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            margin-bottom: var(--space-6);
+        }
+
+        .license-card h2 {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--space-4);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .license-card h2 i {
+            color: var(--color-accent);
+        }
+
+        .license-card p {
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            margin-bottom: var(--space-4);
+        }
+
+        .license-card code {
+            display: inline-block;
+            background: var(--color-bg-primary);
+            padding: var(--space-1) var(--space-2);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-sm);
+            font-family: monospace;
+        }
+
+        .license-section {
+            margin-bottom: var(--space-8);
+        }
+
+        .license-section h3 {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--space-3);
+        }
+
+        .license-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .license-list li {
+            padding: var(--space-3) 0;
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .license-list li:last-child {
+            border-bottom: none;
+        }
+
+        .license-list .name {
+            font-weight: var(--font-weight-medium);
+        }
+
+        .license-list .type {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-muted);
+        }
+
+        .alert-box {
+            padding: var(--space-4);
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: var(--radius-lg);
+            margin: var(--space-6) 0;
+        }
+
+        .alert-box i {
+            color: var(--color-accent);
+            margin-right: var(--space-2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/images/logo/logo-dark.svg" alt="Dark X" class="logo-image">
+                </a>
+                <nav class="nav-main">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="primary-home.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="contact.html" class="btn btn-ghost">Sign In</a>
+                    <a href="pricing.html" class="btn btn-primary">Get Started</a>
+                </div>
+                <button class="cart-button"><i class="bi bi-cart3"></i><span class="cart-count">0</span></button>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="section">
+        <div class="container">
+            <div class="licenses-container">
+                <div class="section-header text-center" style="margin-bottom: var(--space-12);">
+                    <h1 class="section-title">Licenses & <span class="text-accent">Attributions</span></h1>
+                    <p class="section-description">Third-party resources used in this template.</p>
+                </div>
+
+                <div class="license-card">
+                    <h2><i class="bi bi-code-square"></i> Template License</h2>
+                    <div class="license-section">
+                        <p>This Dark X SaaS Template is designed by <strong>BRIX Templates</strong> and built with HTML, CSS, and JavaScript.</p>
+                        <p><strong>Usage Rights:</strong></p>
+                        <ul style="color: var(--color-text-secondary); margin-left: var(--space-6); line-height: 2;">
+                            <li>Use for personal and commercial projects</li>
+                            <li>Modify and customize for your projects</li>
+                            <li>Use in unlimited number of projects</li>
+                        </ul>
+                        <p><strong>Restrictions:</strong></p>
+                        <ul style="color: var(--color-text-secondary); margin-left: var(--space-6); line-height: 2;">
+                            <li>Cannot redistribute or resell the template</li>
+                            <li>Cannot offer template as a standalone product</li>
+                            <li>Cannot use template to create competing products</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="license-card">
+                    <h2><i class="bi bi-fonts"></i> Google Fonts - Inter</h2>
+                    <div class="license-section">
+                        <p><strong>Font:</strong> Inter</p>
+                        <p><strong>License:</strong> <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL" target="_blank">Open Font License (OFL)</a></p>
+                        <p><strong>Website:</strong> <a href="https://fonts.google.com/specimen/Inter" target="_blank">fonts.google.com</a></p>
+                        <p>Inter is a typeface carefully crafted & designed for computer screens.</p>
+                    </div>
+                </div>
+
+                <div class="license-card">
+                    <h2><i class="bi bi-bootstrap"></i> Bootstrap Icons</h2>
+                    <div class="license-section">
+                        <p><strong>License:</strong> <a href="https://github.com/twbs/icons/blob/main/LICENSE" target="_blank">MIT License</a></p>
+                        <p><strong>Website:</strong> <a href="https://icons.getbootstrap.com/" target="_blank">icons.getbootstrap.com</a></p>
+                        <p>Bootstrap Icons are SVG-based iconography built by the Bootstrap team.</p>
+                        <div class="alert-box">
+                            <i class="bi bi-info-circle"></i>
+                            <strong>Note:</strong> Bootstrap Icons are designed by Twitter, Inc. and licensed under MIT.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="license-card">
+                    <h2><i class="bi bi-image"></i> Images</h2>
+                    <div class="license-section">
+                        <p>Placeholder images used in this template are for demonstration purposes only. Replace with your own images.</p>
+                        <p><strong>Image Sources (if any real images used):</strong></p>
+                        <ul class="license-list">
+                            <li>
+                                <span class="name">Unsplash</span>
+                                <span class="type">License: <a href="https://unsplash.com/license" target="_blank">Unsplash License</a></span>
+                            </li>
+                            <li>
+                                <span class="name">Pexels</span>
+                                <span class="type">License: <a href="https://www.pexels.com/license/" target="_blank">Pexels License</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="license-card">
+                    <h2><i class="bi bi-braces"></i> JavaScript Libraries</h2>
+                    <div class="license-section">
+                        <p>This template uses vanilla JavaScript with no external library dependencies.</p>
+                        <p>If you add external libraries, ensure you have appropriate licenses:</p>
+                        <ul class="license-list">
+                            <li>
+                                <span class="name">jQuery</span>
+                                <span class="type">MIT License</span>
+                            </li>
+                            <li>
+                                <span class="name">React</span>
+                                <span class="type">MIT License</span>
+                            </li>
+                            <li>
+                                <span class="name">Vue.js</span>
+                                <span class="type">MIT License</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="alert-box">
+                    <i class="bi bi-exclamation-circle"></i>
+                    <strong>Disclaimer:</strong> While we strive to provide accurate license information, always verify third-party licenses independently and ensure compliance with your specific use case.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-menu-main">
+                    <div class="footer-menu-section">
+                        <h4 class="footer-menu-title">Pages</h4>
+                        <ul class="footer-nav">
+                            <li><a href="primary-home.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="features.html">Features</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu-section">
+                        <h4 class="footer-menu-title">Resources</h4>
+                        <ul class="footer-nav">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="integrations.html">Integrations</a></li>
+                            <li><a href="team.html">Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu-section footer-newsletter">
+                        <h4 class="footer-menu-title">Stay Updated</h4>
+                        <p class="footer-newsletter-text">Subscribe to our newsletter for the latest updates.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="../assets/images/logo/logo-dark.svg" alt="Dark X">
+                    </a>
+                    <p class="footer-copyright">Copyright 2026 Dark X | Designed by BRIX Templates</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/scripts/main.js"></script>
+</body>
+</html>
